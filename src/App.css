@@ -1,0 +1,190 @@
+/* Additional custom styles for professional dashboard */
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(30, 41, 59);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.5);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(59, 130, 246);
+}
+
+/* Loading animation */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2), 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Input focus animation */
+.input-focus {
+  transition: all 0.3s ease-in-out;
+}
+
+.input-focus:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 8px;
+  background-color: rgba(55, 65, 81, 0.5);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, rgb(59, 130, 246), rgb(96, 165, 250), rgb(34, 211, 238));
+  border-radius: 9999px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Status indicator */
+.status-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-indicator.active {
+  background-color: rgb(52, 211, 153);
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+.status-indicator.inactive {
+  background-color: rgb(71, 85, 105);
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background-color: rgba(30, 41, 59, 0.4);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(59, 130, 246, 0.5);
+  border-radius: 3px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(59, 130, 246);
+}
+
+/* Section divider */
+.section-divider {
+  border-top: 1px solid rgb(226, 232, 240);
+  margin: 1.5rem 0;
+}
+
+/* Metric display */
+.metric-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(226, 232, 240);
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(148, 163, 184);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Alert/Notification styles */
+.alert {
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left-color: rgb(16, 185, 129);
+  color: rgb(110, 231, 183);
+}
+
+.alert-warning {
+  background-color: rgba(217, 119, 6, 0.1);
+  border-left-color: rgb(217, 119, 6);
+  color: rgb(253, 224, 71);
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left-color: rgb(239, 68, 68);
+  color: rgb(248, 113, 113);
+}
+
+.alert-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left-color: rgb(59, 130, 246);
+  color: rgb(147, 197, 253);
+}
